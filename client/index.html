@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkers Online/Offline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Checkers Game</h1>
+  <div id="menu">
+    <div class="menu-section">
+      <h2>Offline Mode</h2>
+      <button onclick="startOffline()">Play Offline (2 Players)</button>
+      <button onclick="startVsAI()">Play vs Computer</button>
+    </div>
+    <hr class="menu-divider" />
+    <div class="menu-section">
+      <h2>Online Mode</h2>
+      <button onclick="showOnlineMenu()">Play Online</button>
+      <div id="onlineMenu" style="display: none;">
+        <button onclick="createRoom()">Create Room</button>
+        <input id="roomInput" placeholder="Enter Room ID" />
+        <button onclick="joinRoom()">Join Room</button>
+      </div>
+    </div>
+  </div>
+  <canvas id="gameCanvas" width="600" height="600" style="display: none;"></canvas>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
